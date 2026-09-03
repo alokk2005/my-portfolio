@@ -20,7 +20,7 @@ const projects = [
     github: 'https://github.com/alokk2005/cnn-cat-vs-dog-classification.git',
     emoji: '🐱🐶',
     reverse: false,
-    color: '#9b4dff',
+    color: '#e0e0e0',
   },
   {
     num: '02 — Algorithms (C++)',
@@ -30,7 +30,7 @@ const projects = [
     github: 'https://github.com/alok-kharwar',
     emoji: '📊',
     reverse: true,
-    color: '#ff4dac',
+    color: '#bdbdbd',
   },
   {
     num: '03 — Data Visualization',
@@ -40,7 +40,7 @@ const projects = [
     github: 'https://github.com/alok-kharwar',
     emoji: '📈',
     reverse: false,
-    color: '#4d9fff',
+    color: '#d0d0d0',
   },
   {
     num: '04 — OS Concepts (C)',
@@ -50,7 +50,7 @@ const projects = [
     github: 'https://github.com/alok-kharwar',
     emoji: '⚙️',
     reverse: true,
-    color: '#ff9b4d',
+    color: '#aaaaaa',
   },
   {
     num: '05 — AI Chatbot',
@@ -60,7 +60,7 @@ const projects = [
     github: 'https://github.com/alok-kharwar',
     emoji: '🏠',
     reverse: false,
-    color: '#4dffb8',
+    color: '#c8c8c8',
   },
 ]
 
@@ -140,7 +140,7 @@ function Particles() {
         if (d.y < 0) d.y = H; if (d.y > H) d.y = 0
         ctx.beginPath()
         ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(155,77,255,${d.a * 0.6})`
+        ctx.fillStyle = `rgba(255,255,255,${d.a * 0.35})`
         ctx.fill()
       })
       // draw lines between close dots
@@ -153,7 +153,7 @@ function Particles() {
             ctx.beginPath()
             ctx.moveTo(dots[i].x, dots[i].y)
             ctx.lineTo(dots[j].x, dots[j].y)
-            ctx.strokeStyle = `rgba(155,77,255,${(1 - dist / 120) * 0.12})`
+            ctx.strokeStyle = `rgba(255,255,255,${(1 - dist / 120) * 0.08})`
             ctx.lineWidth = 0.5
             ctx.stroke()
           }
@@ -437,39 +437,39 @@ const App = () => {
 
                 {[{
                     badge: 'AWS',
-                    color: '#FF9900',
-                    bg: 'linear-gradient(135deg,#1a0f00,#3d2200)',
+                    color: '#ffffff',
+                    bg: 'linear-gradient(135deg,#141414,#1f1f1f)',
                     name: 'AWS Certified Machine Learning – Associate',
                     issuer: 'Amazon Web Services',
                     year: '2026',
                   },
                   {
                     badge: 'AWS',
-                    color: '#FF9900',
-                    bg: 'linear-gradient(135deg,#1a0f00,#3d2200)',
+                    color: '#ffffff',
+                    bg: 'linear-gradient(135deg,#141414,#1f1f1f)',
                     name: 'AWS Certified Cloud Practitioner',
                     issuer: 'Amazon Web Services',
                     year: '2025',
                   },
                   {
                     badge: 'AI',
-                    color: '#FF6F00',
-                    bg: 'linear-gradient(135deg,#1a1000,#3d2800)',
+                    color: '#ffffff',
+                    bg: 'linear-gradient(135deg,#141414,#1f1f1f)',
                     name: 'AI for Everyone',
                     issuer: 'DeepLearning.AI (Coursera)',
                     year: '2024',
                   },
                   {
                     badge: 'AI',
-                    color: '#4d9fff',
-                    bg: 'linear-gradient(135deg,#00101a,#001f3d)',
+                    color: '#ffffff',
+                    bg: 'linear-gradient(135deg,#141414,#1f1f1f)',
                     name: 'AMD AI Academy Certification',
                     issuer: 'Hackingly',
                     year: '2026',
                   },
                 ].map((c, i) => (
                   <div className="cert-item" key={i}>
-                    <div className="cert-badge" style={{ background: c.bg, color: c.color, borderColor: c.color + '44' }}>
+                    <div className="cert-badge" style={{ background: c.bg, color: c.color, borderColor: 'rgba(255,255,255,0.25)' }}>
                       {c.badge}
                     </div>
                     <div className="cert-info">
